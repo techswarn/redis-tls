@@ -5,14 +5,14 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Install dependencies
-COPY package.json yarn.lock ./
+COPY package.json yarn.lock /app
 RUN yarn install --frozen-lockfile
 
 # Install Nest.js CLI globally (optional, remove if not needed)
 RUN yarn global add @nestjs/cli
 
 # Copy the rest of the application code
-COPY . .
+COPY . /app
 
 # Expose the port the app runs on
 EXPOSE 3000

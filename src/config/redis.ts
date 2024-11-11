@@ -19,4 +19,6 @@ export const rawConfig = {
   tls: tlsOptions,
 };
 
+console.log('rawConfig:', rawConfig);
+
 export default registerAs('redis', () => rawConfig);
