@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'production') {
       rejectUnauthorized: true,
     };
   } else {
-    tlsOptions = { rejectUnauthorized: false }; // Use with caution
+    tlsOptions = { rejectUnauthorized: true }; // Use with caution
   }
 }
 
